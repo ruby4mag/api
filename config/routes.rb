@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :urltests
+  resources :tests
   get 'dashboard/index'
   resources :unlock_accounts, controller: 'rails_jwt_auth/unlock_accounts', only: %i[update]
   resources :invitations, controller: 'rails_jwt_auth/invitations', only: [:show, :create, :update]
